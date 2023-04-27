@@ -1,38 +1,110 @@
-.App {
+
+div {
+  min-height: 100px;
+}
+span {
+  color: white;
+  margin: auto;
+  font-weight: 700;
+}
+.container {
+  max-width: 1000px;
+  padding: 10px;
+  margin: auto;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.grid {
+  display: grid;
+  gap: 10px;
+  grid-template-rows: 1fr 1fr;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.first {
+  background-color: blue;
+}
+.second {
+  background-color: red;
+  grid-row: 2;
+  grid-area: second;
+}
+.third {
+  background-color: yellow;
+}
+.fourth {
+  background-color: brown;
+}
+.fifth {
+  background-color: purple;
+}
+.sixth {
+  background-color: aqua;
+}
+.seventh {
+  background-color:aquamarine;
+  grid-area: seventh;
+}
+.eighth {
+  background-color: violet;
+}
+.nineth {
+  background-color: darkgray;
+}
+/* 1 - 4 */
+.first-fourth--container {
+  display: grid;
+  gap: 10px;
+}
+.second-fourth--container {
+  display: grid;
+  gap: 10px;
+  grid-template:
+      "third-fourth"
+      "second";
+}
+.third-fourth--container {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row: 1;
+  grid-area: third-fourth;
+}
+/* 5 - 9 */
+.fifth-nineth--container {
+  display: grid;
+  gap: 10px;
+  grid-template:
+      "seventh seventh"
+      "fifth-sixth eighth-nineth"
+      "fifth-sixth eighth-nineth" / 1fr 1fr;
+}
+.fifth-sixth--container {
+  display: grid;
+  gap: 10px;
+  grid-template-rows: 1fr 1fr;
+  grid-area: fifth-sixth;
+}
+.eighth-nineth--container {
+  display: grid;
+  gap: 10px;
+  grid-template-rows: 1fr 1fr;
+  grid-area: eighth-nineth;
+}
+@media (min-width: 600px) {
+  .first-fourth--container {
+      grid-template-rows: none;
+      grid-template-columns: 1fr 1fr;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .second-fourth--container {
+      grid-template:
+          "second"
+          "third-fourth";
   }
-  to {
-    transform: rotate(360deg);
+  .fifth-nineth--container {
+      grid-template: "fifth-sixth fifth-sixth seventh seventh seventh eighth-nineth eighth-nineth";
+  }
+  .fifth-sixth--container {
+      grid-template-rows: 2fr 3fr;
+  }
+  .eighth-nineth--container {
+      grid-template-rows: 2fr 1fr;
   }
 }
