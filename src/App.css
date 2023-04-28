@@ -18,35 +18,14 @@ span {
   gap: 10px;
   grid-template-rows: 1fr 1fr;
 }
-.first {
-  background-color: blue;
-}
 .second {
   background-color: red;
   grid-row: 2;
   grid-area: second;
 }
-.third {
-  background-color: yellow;
-}
-.fourth {
-  background-color: brown;
-}
-.fifth {
-  background-color: purple;
-}
-.sixth {
-  background-color: aqua;
-}
 .seventh {
   background-color:aquamarine;
   grid-area: seventh;
-}
-.eighth {
-  background-color: violet;
-}
-.nineth {
-  background-color: darkgray;
 }
 /* 1 - 4 */
 .first-fourth--container {

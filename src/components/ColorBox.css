@@ -1,0 +1,8 @@
+.colorBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.colorBox:hover {
+    cursor: pointer;
+}
